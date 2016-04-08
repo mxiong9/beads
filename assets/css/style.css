@@ -1,58 +1,69 @@
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  margin: 0px;
-  background: #60D6CC;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0px;
+    background: #60D6CC;
 }
+
+
+/* Necklace */
 
 .necklacestring {
-  display: inline-block;
-  width: 800px;
-  height: 800px;
-  border-radius: 50%;
-  border: 3px solid black;
-  margin: 0 auto;
-  position: absolute;
-  right: 0px;
-  left: 0px;
-  top: -500px;
-  padding:
+    display: inline-block;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    border: 3px solid black;
+    margin: 0 auto;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: -500px;
+    padding:
 }
 
+/* Beads */
+
 .bead {
-  width: 60px;
-  height: 60px;
-  background: white;
-  border-radius: 50%;
-  right: 0px;
-  left: 0px;
-  position: absolute;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    margin-left: 10%;
+    position: relative;
+    margin-top: 1%;
+}
+
+input#addBead {
+    position: absolute;
+    bottom: 20%;
+    left: 48%;
 }
 
 .bead:hover {
-  opacity: 0.5;
-  -webkit-transform: scale(1.25);
-  transition: 300ms;
+    opacity: 0.5;
+    -webkit-transform: scale(1.25);
+    transition: 300ms;
 }
 
 input.EarnBead {
-  width: 300px;
-  padding: 20px height: 60px;
-  background: white;
-  border-radius: 50%;
-  right: 0px;
-  left: 0px;
-  position: absolute;
+    width: 300px;
+    padding: 20px height: 60px;
+    background: white;
+    border-radius: 50%;
+    right: 0px;
+    left: 0px;
+    position: absolute;
 }
 
 input.ShareBead {
-  width: 300px;
-  padding=20px;
-  text-align=center;
-  height: 60px;
-  background: red;
-  position: absolute;
+    width: 300px;
+    padding=20px;
+    text-align=center;
+    height: 60px;
+    background: red;
+    position: absolute;
 }
 

@@ -6,11 +6,15 @@ $(document).ready(function() {
     alert("Are you sure you want to add a button" + href)
   });
 
-  $('.addBead').click(function() { //toFix: beads overlap, adds to most recently added bead div. shift relationally
+  //Adding a Bead
+
+  $('#addBead').click(function() { //toFix: beads overlap, adds to most recently added bead div. shift relationally
     var destination = "";
-            if (num_beads == 0){
+    var num_beads = 0
+            if (num_beads == 0) {
                 destination = document.getElementById("myContainer");
-            } else {
+            } 
+            else {
                 name = "bead" + String(num_beads);
                 destination = document.getElementById(name);
             }            
