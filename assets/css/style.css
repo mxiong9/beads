@@ -7,6 +7,17 @@ body {
     background: #60D6CC;
 }
 
+/* Container */
+
+#myContainer {
+    margin-top: 6%;
+}
+
+/* Button */
+
+#myButtons {
+    position: relative;
+}
 
 /* Necklace */
 
@@ -31,9 +42,10 @@ body {
     height: 60px;
     background: white;
     border-radius: 50%;
-    margin-left: 10%;
     position: relative;
-    margin-top: 1%;
+    margin-top: 4%;
+    display: inline-block;
+    margin-left: 3%;
 }
 
 input#addBead {
@@ -60,8 +72,8 @@ input.EarnBead {
 
 input.ShareBead {
     width: 300px;
-    padding=20px;
-    text-align=center;
+    padding: 20px;
+    text-align: center;
     height: 60px;
     background: red;
     position: absolute;
