@@ -37,5 +37,8 @@ $(document).ready(function() {
     var necklaceString = document.createElement("DIV");
     stringDestination.appendChild(necklaceString);
 
+    var text = $('#text').val();
+    
+
   });
 });
