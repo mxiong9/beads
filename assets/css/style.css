@@ -4,7 +4,7 @@ body {
     height: 100%;
     position: relative;
     margin: 0px;
-    background: #60D6CC;
+    background: white;
 }
 
 /* Container */
@@ -30,7 +30,7 @@ body {
 
 .necklaceString {
   position: absolute;
-  margin-top: 5%;
+  margin-top: 6%;
   display: inline-block;
   background: black;
   height: 3px;
@@ -53,7 +53,7 @@ body {
 .bead {
     width: 60px;
     height: 60px;
-    background: white;
+    background: #48D1CC;
     border-radius: 50%;
     position: relative;
     margin-top: 4%;
