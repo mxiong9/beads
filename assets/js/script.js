@@ -1,3 +1,5 @@
+var num_beads = 0
+
 $(document).ready(function() {
 
   $('li>a[id$="myButtons"]').click(function(event) {
@@ -10,9 +12,8 @@ $(document).ready(function() {
 
   $('#addBead').click(function() { //toFix: beads overlap, adds to most recently added bead div. shift relationally
     var destination = "";
-    var num_beads = 0
             if (num_beads == 0) {
-                destination = document.getElementById("myContainer");
+                var destination = document.getElementById("myContainer");
             } 
             else {
                 name = "bead" + String(num_beads);
@@ -23,8 +24,19 @@ $(document).ready(function() {
             bead.className = "bead";
             bead.id = "bead" + String(num_beads);
             destination.appendChild(bead);
+            var necklacestring = document.createElement("necklacestring");
+
+
+            var screenWidth = $(window).width();
+            if (num_beads == 13) {
+                destination.appendChild(necklacestring);
+
+
+            }
+
       
     });
+
 
 
 });
