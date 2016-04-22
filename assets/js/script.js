@@ -44,7 +44,7 @@ $(document).ready(function() {
     var content = document.getElementById('text').value;
     document.getElementById(bead.id).innerHTML = content;
 //problem: hard to move the text without moving the bead because it's the same DIV
-    content.val('');
+    //content.val(""); also need to delete the content from the input box
 
   });
 });
