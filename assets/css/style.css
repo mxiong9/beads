@@ -28,6 +28,7 @@ body {
 
 /* Necklace */
 
+
 .necklaceString {
   position: absolute;
   margin-top: 6%;
@@ -55,13 +56,12 @@ body {
 .bead {
     width: 60px;
     height: 60px;
-    background: #94d6ec;
+    background: #48D1CC;
     border-radius: 50%;
     position: relative;
     margin-top: 4%;
     display: inline-block;
     margin-left: 3%;
-    float: left;
 }
 
 input#addBead {

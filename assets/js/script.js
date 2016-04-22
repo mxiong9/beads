@@ -40,12 +40,12 @@ $(document).ready(function() {
     bead.className = "bead";
     bead.id = "bead" + String(num_beads);
     destination.appendChild(bead); 
-    console.log("num_beads", num_beads); 
+    console.log("num_beads", num_beads);   
 
-
-    //add text
+     //add text (problem: hard to move the text because the text is the same DIV as the bead)
     var content = document.getElementById('text').value;
-    document.getElementById(bead.id).innerHTML = content;    
+    document.getElementById(bead.id).innerHTML = content; 
+    //to be done: need to delete the content from the textarea once the button is  
   });
 });
 
@@ -57,5 +57,3 @@ function addString(){
     string.className = "necklaceString";
     // numStrings++; //not currently counting strings    
 }
-
-
