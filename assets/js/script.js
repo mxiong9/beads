@@ -8,16 +8,13 @@ $(document).ready(function() {
 
   //Adding a Bead and String
 
+    var num_beads = 0
+
   $('#addBead').click(function() { //toFix: beads overlap, adds to most recently added bead div. shift relationally
     var destination = "";
-    var num_beads = 0
-    if (num_beads == 0) {
-      destination = document.getElementById("myContainer");
-    }
-    else {
-      name = "bead" + String(num_beads);
-      destination = document.getElementById(name);
-    }
+    
+    var destination = document.getElementById("myContainer");
+
     var bead = document.createElement("DIV");
     num_beads++;
     bead.className = "bead";
@@ -38,7 +35,8 @@ $(document).ready(function() {
     stringDestination.appendChild(necklaceString);
 
     var text = $('#text').val();
-    
+
+
 
   });
 });
