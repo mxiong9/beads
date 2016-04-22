@@ -53,12 +53,13 @@ body {
 .bead {
     width: 60px;
     height: 60px;
-    background: #48D1CC;
+    background: #94d6ec;
     border-radius: 50%;
     position: relative;
     margin-top: 4%;
     display: inline-block;
     margin-left: 3%;
+    float: left;
 }
 
 input#addBead {
