@@ -1,3 +1,7 @@
+var num_beads = 0; 
+// var numStrings = 0; //not currently counting strings
+
+
 $(document).ready(function() {
 
   $('li>a[id$="myButtons"]').click(function(event) {
@@ -8,43 +12,50 @@ $(document).ready(function() {
 
   //Adding a Bead and String
 
-    var num_beads = 0
-
-  $('#addBead').click(function() { //toFix: beads overlap, adds to most recently added bead div. shift relationally
-    var destination = "";
-    
+  $('#addBead').click(function() { //toFix: beads overlap, adds to most recently added bead div. shif relationally
+    var lastBead; //the last bead div added to the html file
+    var windowProportion;
+    var beadSize = 60; //will eventually get the information from the css   
+    var windowWidth = $(window).width(); 
     var destination = document.getElementById("myContainer");
 
+    if ($('.bead').length != 0){ //if there are beads already on the page
+        lastBead = $( ".bead" ).last(); 
+        var lastOffset = lastBead.offset().left;
+        windowProportion = (lastOffset + beadSize)/windowWidth; //temp solution
+        console.log("lastOffset", lastOffset);
+    } else {
+        windowProportion = 0;
+    } 
+
+    /*when the amount of the screen taken by adding a bead
+     exceeds 90% (only works on some sizes), add a new string*/
+    if (windowProportion > 0.9){ 
+        addString();
+    } 
+  
+    /*add the new bead*/
     var bead = document.createElement("DIV");
     num_beads++;
     bead.className = "bead";
     bead.id = "bead" + String(num_beads);
-    destination.appendChild(bead);
-
- //   var stringDestination = "";
-   // var offset = $(".bead").offset().left;
-  //  console.log(offset);
-   // var numStrings = 0;
-    //if (offset <= 60) {
-   //   name = "necklaceString" + String(numStrings);
-    //  stringDestination = document.getElementById(name);
-      //stringDestination = document.getElementById("myContainer");
-     // numStrings++;
-  //  }
-   // var necklaceString = document.createElement("DIV");
-   // stringDestination.appendChild(necklaceString);
+    destination.appendChild(bead); 
+    console.log("num_beads", num_beads); 
 
 
-
- //   var content = $('#text').val();
- //   content.id = "content" + String(num_beads);
-
- //   content.appendTo(bead);
-
+    //add text
     var content = document.getElementById('text').value;
-    document.getElementById(bead.id).innerHTML = content;
-//problem: hard to move the text without moving the bead because it's the same DIV
-    //content.val(""); also need to delete the content from the input box
-
+    document.getElementById(bead.id).innerHTML = content;    
   });
 });
+
+function addString(){
+    var destination = document.getElementById("myContainer");
+    var string = document.createElement("DIV");
+    destination.appendChild(string);
+    // string.name = "necklaceString" + String(numStrings);
+    string.className = "necklaceString";
+    // numStrings++; //not currently counting strings    
+}
+
+
